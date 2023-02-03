@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CondidateController!{% endblock %}
+
+{% block body %}
+ <div class="container mt-4">
+    <h1>Mes Condidates</h1>
+
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Fullname</th>
+      <th scope="col">Email</th>
+      <th scope="col">Profile</th>
+      <th scope="col">CV</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for condidate in condidates %}
+
+    <tr class="table-primary">
+      <th scope="row">{{ condidate.ID }}</th>
+     <td >{{ condidate.Username }}</td>
+  <td >{{ condidate.Fullname }}</td>
+  <td >{{ condidate.Email }}</td>
+    </tr>
+        {% endfor %} 
+ <tbody>
+</table>
+</div>
+
+{% endblock %}
